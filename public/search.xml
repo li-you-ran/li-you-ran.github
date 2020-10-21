@@ -38,4 +38,103 @@
     <url>/posts/c9e3de7b/</url>
     <content><![CDATA[]]></content>
   </entry>
+  <entry>
+    <title>pthread多线程矩阵运算</title>
+    <url>/posts/12c87f1c/</url>
+    <content><![CDATA[<h2><span id="多线程进行矩阵运算">多线程进行矩阵运算</span></h2><p>主要为定义二级指针，实现动态二位数组以及随机赋值，但是存在线程数组无法动态赋值的问题</p>
+<a id="more"></a>
+<p>‘’’<br>#include<iostream><br>#include&lt;sys/time.h&gt;<br>#include&lt;pthread.h&gt;<br>#include&lt;stdlib.h&gt;<br>#include <chrono> </chrono></iostream></p>
+<p>using namespace std;<br>using namespace chrono;</p>
+<p>pthread_mutex_t  g_mutex_lock;<br>int l = 0;<br>int arry_num[4] = {48, 128,1024, 2024};<br>int threads_num[4] = {1, 2, 4, 8 };<br>int threads = 0;</p>
+<p> unsigned long timer;</p>
+<p>int **a                                                                      ;<br>int **b;<br>int **c;</p>
+<p>void arry_fuzhi();<br>void * THread(void * data);<br>void threads_j(int j);</p>
+<p>int main()<br>{<br> for(int i=0; i&lt;4;i++)<br>    {<br>        l = arry_num[i];<br>        arry_fuzhi();<br>         for (int j= 0; j&lt;4;j++)<br>            threads_j(threads_num[3]);</p>
+<pre><code> &#125;
+
+
+delete [] a;
+delete [] b;
+delete [] c;
+
+return 0;</code></pre>
+<p>}</p>
+<p>void arry_fuzhi()<br>{<br>    a = new int * [l];<br>    b = new int * [l];<br>    c = new int * [l];<br>    for (int i=0; i&lt;l; i++)<br>    {<br>        a[i] = new int[l];<br>        b[i] = new int[l];<br>        c[i] = new int[l];</p>
+<pre><code>&#125;
+
+for (int n=0; n&lt;l; n++)
+&#123;
+    for (int m=0; m&lt;l; m++)
+    &#123;
+        a[n][m] = rand() % 100;
+        b[n][m] = rand() % 100;
+
+    &#125;
+
+&#125;</code></pre>
+<p>}</p>
+<p>void * THread(void *data)<br>{</p>
+<pre><code>int i, j, k, tid, portin_size, row_start, row_end;
+int sum = 0;
+tid = *(int *)data ;
+
+
+//cout &lt;&lt; tid &lt;&lt; endl;
+portin_size = l / threads;
+row_start = tid * portin_size;
+
+row_end = (tid+1) * portin_size;
+
+for(int i=row_start; i&lt;row_end;i++)
+&#123;
+
+   for (int k=0; k&lt;l; k++)
+   &#123;
+    for(int j=0; j&lt;l; j++)
+    &#123;
+        sum += a[i][j] * b[j][i];
+    &#125;
+
+    c[i][k] = sum;
+
+&#125;
+
+&#125;</code></pre>
+<p>}</p>
+<p>void threads_j(int j)<br>{</p>
+<pre><code>        // timeval  start_t;
+        // timeval  end_t;
+        timeval  start;
+        timeval  end;
+        threads = j;
+        //gettimeofday(&amp;start_t, NULL);
+        gettimeofday(&amp;start, NULL);
+        pthread_t  *pid  = new pthread_t [j];
+
+        for(int num=0; num&lt;j; num++)
+        &#123;
+        pthread_create(&amp;pid[num], NULL, THread,  &amp;num);
+        pthread_join(pid[num], NULL);
+        &#125;
+
+
+       // gettimeofday(&amp;end_t, NULL);
+        gettimeofday(&amp;end, NULL);
+       // timer = 1000000*(end_t.tv_sec-start_t.tv_sec)+ end_t.tv_usec-start_t.tv_usec;//微秒计时
+        //cout &lt;&lt;  double(duration.count()) * microseconds::period::num / microseconds::period::den  &lt;&lt; endl;
+        timer =1000000* (end.tv_sec-start.tv_sec)+ end.tv_usec-start.tv_usec;//多线程计算时间（微秒）
+         cout &lt;&lt; &quot;线程设为:&quot; &lt;&lt;  endl;
+         cout  &lt;&lt;  &quot;多线程完成矩阵运算的时间为：&quot;  ; 
+         cout &lt;&lt;timer &lt;&lt;  &quot;微秒&quot;  &lt;&lt; endl;
+        delete [] pid;</code></pre>
+<p>}<br>‘’’</p>
+]]></content>
+      <categories>
+        <category>高性能</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
 </search>
