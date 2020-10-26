@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo部署在gitee可能出现问题</title>
-    <url>/posts/5237292d/</url>
-    <content><![CDATA[<h2><span id="gitee-静态页面强制">gitee  静态页面强制</span></h2><a id="more"></a>
-
-<p>将hexo部署到gitee后，本地可以更新，浏览器访问必须强制刷新,清除浏览器缓存后更新，否则一直调用本地缓存，并且第一次登入图标加载也会有点问题。</p>
-<p><strong>将hexo部署到github并未发生这种问题</strong></p>
-]]></content>
-      <categories>
-        <category>DIY</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>-gitee</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubutu桌面不显示</title>
     <url>/posts/c66da4c6/</url>
     <content><![CDATA[<h2><span id="ubuntu-桌面不显示文件">ubuntu 桌面不显示文件</span></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;使用快捷键</span><br><span class="line">win + tab</span><br></pre></td></tr></table></figure>
@@ -31,6 +15,22 @@
       </categories>
       <tags>
         <tag>linux问题汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo部署在gitee可能出现问题</title>
+    <url>/posts/5237292d/</url>
+    <content><![CDATA[<h2><span id="gitee-静态页面强制">gitee  静态页面强制</span></h2><a id="more"></a>
+
+<p>将hexo部署到gitee后，本地可以更新，浏览器访问必须强制刷新,清除浏览器缓存后更新，否则一直调用本地缓存，并且第一次登入图标加载也会有点问题。</p>
+<p><strong>将hexo部署到github并未发生这种问题</strong></p>
+]]></content>
+      <categories>
+        <category>DIY</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>-gitee</tag>
       </tags>
   </entry>
   <entry>
