@@ -34,6 +34,359 @@
       </tags>
   </entry>
   <entry>
+    <title>leetcode刷题历程</title>
+    <url>/posts/d16ecfb3/</url>
+    <content><![CDATA[<p>#以C++作为编程语言刷题，开始并未使用STL，感觉设计运行确实繁琐一些</p>
+<a id="more"></a>
+<h2><span id="剑指offer-03-数组重复数字">剑指offer 03 数组重复数字</span></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findRepeatNumber(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line"></span><br><span class="line">      </span><br><span class="line"> for(int i&#x3D;0;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        int index&#x3D;nums[i]%nums.size();</span><br><span class="line">        nums[index]+&#x3D;nums.size();</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(nums[i]&gt;&#x3D;2*nums.size())</span><br><span class="line">        &#123;</span><br><span class="line">            return i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">## 剑指offer 04 二位数组查找</span><br></pre></td></tr></table></figure>
+<p>class Solution {<br>public:<br>    bool findNumberIn2DArray(vector&lt;vector<int>&gt;&amp; matrix, int target) {<br>         if ( matrix.size() == 0 || matrix[0].size() == 0) {<br>            return false;<br>        }</int></p>
+<pre><code>    int rows = matrix.size(), coums = matrix[0].size();
+    int coum = coums - 1;
+    int row = 0;
+    while(row&lt;rows&amp;&amp;coum&gt;=0)
+    &#123;
+        if(target == matrix[row][coum])
+        &#123;
+            return true;
+        &#125;
+        else if (target &lt; matrix[row][coum])
+        &#123;
+            coum--;
+        &#125;
+
+        else
+        &#123;
+            row++;
+        &#125;
+    &#125;
+
+
+    return false;
+&#125;</code></pre>
+<p>};</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 剑指offer 05 替换空格</span><br></pre></td></tr></table></figure>
+<p>class Solution {<br>public:<br>    string replaceSpace(string s) {</p>
+<pre><code>   string str = &quot;%20&quot;;
+   while((-1)!=s.find(&#39; &#39;) )
+   &#123;
+       s.replace(s.find(&#39; &#39;),1,str);
+
+   &#125;
+
+    return s;
+&#125;</code></pre>
+<p>};</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## 剑指offer 06 打印链表</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<ul>
+<li><p>Definition for singly-linked list.</p>
+</li>
+<li><p>struct ListNode {</p>
+</li>
+<li><p>int val;</p>
+</li>
+<li><p>ListNode *next;</p>
+</li>
+<li><p>ListNode(int x) : val(x), next(NULL) {}</p>
+</li>
+<li><p>};</p>
+</li>
+<li><p>/<br>class Solution {<br>public:<br>  vector<int> reversePrint(ListNode* head) {</int></p>
+<p>  vector<int> p;<br>  while(head)<br>  {</int></p>
+<pre><code>  p.push_back(head-&gt;val);
+  head = head-&gt;next;</code></pre>
+<p>  }</p>
+<p>  vector<int> m;<br>  int j;<br>  for(j=p.size()-1; j &gt;=0;j– )<br>  {</int></p>
+<pre><code>  //cout &lt;&lt; p[j] &lt;&lt; endl;
+  m.push_back(p[j]);</code></pre>
+<p>  }</p>
+<p>  return m;</p>
+</li>
+</ul>
+<pre><code>&#125;</code></pre>
+<p>};</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## 剑指offer 07 重建二叉树</span><br></pre></td></tr></table></figure>
+<p>/**</p>
+<ul>
+<li><p>Definition for a binary tree node.</p>
+</li>
+<li><p>struct TreeNode {</p>
+</li>
+<li><p>int val;</p>
+</li>
+<li><p>TreeNode *left;</p>
+</li>
+<li><p>TreeNode *right;</p>
+</li>
+<li><p>TreeNode(int x) : val(x), left(NULL), right(NULL) {}</p>
+</li>
+<li><p>};</p>
+</li>
+<li><p>/<br>class Solution {<br>public:<br>  TreeNode* buildTree(vector<int>&amp; preorder, vector<int>&amp; inorder) {</int></int></p>
+<pre><code>  if(preorder.empty() || preorder.size() != inorder.size()) return nullptr;
+  int preStart = 0, inStart = 0;
+  int preEnd = preorder.size() - 1, inEnd = inorder.size() - 1;
+
+  return binaryTree(preorder, inorder, preStart, preEnd, inStart, inEnd);</code></pre>
+<p>  }</p>
+<p>  TreeNode *binaryTree(vector<int>&amp; preorder, vector<int>&amp; inorder, int preStart, int preEnd, int inStart, int inEnd)<br>  {</int></int></p>
+<pre><code>  if(preStart &gt; preEnd || inStart &gt; inEnd) return nullptr;
+  TreeNode *root = new TreeNode(preorder[preStart]);
+  int middle = 0;
+  for(auto i : inorder)
+  &#123;
+      if(i != preorder[preStart]) middle ++;
+      else break;
+  &#125;
+  root -&gt; left = binaryTree(preorder, inorder, preStart+1, preStart+middle-inStart, inStart, middle-1);
+  root -&gt; right = binaryTree(preorder, inorder, preEnd-(inEnd-middle)+1, preEnd, middle+1, inEnd);
+  return root;</code></pre>
+</li>
+</ul>
+<pre><code>&#125;</code></pre>
+<p>};</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## 1592 重新排列2单词间空格</span><br></pre></td></tr></table></figure>
+<p>class Solution {<br>public:<br>    string reorderSpaces(string text) {</p>
+<pre><code>using namespace  std;
+
+
+int num = 0;
+
+
+int sum = text.length();  
+
+
+
+
+
+
+string str_out = &quot;&quot;;
+int jishu[100] = &#123;0&#125;;
+string str;
+int flag = text.find(&#39; &#39;);
+
+int i = 1;
+
+  while((-1) != flag)
+&#123;
+
+
+    while(0 == flag)
+    &#123;
+        text.erase(0, 1);
+
+        flag = text.find(&#39; &#39;);
+        if(text.length() &gt; 0)
+        &#123;
+            jishu[i] = text.length();
+        &#125;
+    &#125;
+
+
+
+    if (flag &gt; 0 )
+    &#123;
+
+        str = text.substr(0, flag);
+        jishu[i] = flag;
+        str_out += str;
+        text.erase(0, flag);
+        i += 1;
+        flag = text.find(&#39; &#39;);
+    &#125;
+
+        else
+        &#123;
+           break;
+        &#125;
+
+
+
+
+
+
+    &#125;
+
+
+
+int j = 1;
+for (j=1; j&lt;=i; j++)
+&#123;
+
+
+    if(jishu[j] &gt; 0)
+    &#123;
+    num += jishu[j];
+    &#125;
+
+
+&#125;
+
+
+
+int n_s = sum - num;
+
+
+if( i &gt; 1)
+&#123;
+
+int sp , rsp;
+
+
+if(0 == text.length())
+&#123;
+    n_s = sum -str_out.length() ;
+    int n =str_out.length()- jishu[i-1];
+    text = str_out.substr(n, jishu[i-1]);
+    i -= 1;
+    if(i == 1)
+    &#123;
+        rsp = sum - jishu[1] ;
+        string space = &quot;&quot;;
+        space.append(rsp, &#39; &#39;);
+        str_out += space;
+        return str_out;
+    &#125;
+    else
+    &#123;
+
+      cout  &lt;&lt; &quot;@&quot; &lt;&lt; str_out.length() &lt;&lt; &quot;@&quot; &lt;&lt; i &lt;&lt; endl;
+       sp = n_s/(i-1) ;
+
+       rsp = n_s -sp *(i-1);
+    &#125;
+&#125;
+else
+&#123;
+
+   sp = n_s/(i-1);
+
+    rsp = n_s -sp *(i-1);
+&#125;
+
+
+
+
+
+
+
+
+
+
+int s;
+string  space = &quot;&quot; ;
+space.append(sp, &#39; &#39;);
+string  rspace = &quot;&quot; ;
+rspace.append(rsp, &#39; &#39;);
+
+
+  string retu = &quot;&quot;;
+
+
+for (s =1; s&lt; i ; s++)
+&#123;
+
+
+
+    retu += str_out.substr(0, jishu[s]) +  space;
+
+    str_out.erase(0, jishu[s]);
+
+
+
+&#125;
+
+
+ retu += text ;
+
+ retu += rspace ; 
+
+ return retu;
+
+
+&#125;</code></pre>
+<p>else<br>{</p>
+<p>   int rsp = sum - text.length();<br>   string rspace = “”;<br>   rspace.append(rsp, ‘ ‘);<br>   text += rspace;<br>   return text;</p>
+<p>}<br>    }<br>};</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 1630 等差子数组</span><br></pre></td></tr></table></figure>
+<p>class Solution {<br>public:<br>    vector<bool> checkArithmeticSubarrays(vector<int>&amp; nums, vector<int>&amp; l, vector<int>&amp; r) {<br>        using namespace std;<br>        int num_l = l.size();<br>        vector<bool> answer;<br>        vector<int> p;<br>        int length,n,j, loss;<br>        int  idea =0;<br>        for (int i=0; i&lt;num_l; i++)<br>        {<br>            for ( j=l[i]; j&lt;=r[i]; j++)<br>            {</int></bool></int></int></int></bool></p>
+<pre><code>            p.push_back(nums[j]);
+           // cout &lt;&lt; nums[j] &lt;&lt; endl;
+
+        &#125;
+
+        sort(p.begin(), p.end());
+        length = p.size();
+         loss =abs( p[1] - p[0]);
+
+        for ( n=1; n&lt;length; n++)
+        &#123;
+            if (p[n] != (p[n-1]+loss))
+            &#123;
+                answer.push_back(false);
+                idea += 1;
+                break;
+            &#125;
+
+        &#125;
+
+    if (idea == i)
+    &#123;
+        answer.push_back(true);
+        idea += 1;
+    &#125;
+
+        p.clear();
+
+    &#125;
+
+
+    return answer;
+&#125; </code></pre>
+<p>};</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## 1629 按键持续最长的建</span><br></pre></td></tr></table></figure>
+<p>class Solution {<br>public:<br>    char slowestKey(vector<int>&amp; releaseTimes, string keysPressed) {</int></p>
+<pre><code>    int n = releaseTimes.size();
+
+    int num = 0;
+    int time;
+    int time_max = 0;
+
+    for(int i=0; i&lt;n; i++)
+    &#123;
+        if (i &gt;0)
+            time = releaseTimes[i] -  releaseTimes[i-1];
+        else
+            time = releaseTimes[i] ;
+        if (time &gt;= time_max)
+        &#123;
+            time_max  =  time;
+            num = i;
+        &#125;       
+    &#125;
+    return keysPressed[num];
+&#125;</code></pre>
+<p>};</p>
+<pre><code>
+
+
+
+
+
+
+
+
+</code></pre>
+]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>letnet_minst</title>
     <url>/posts/574630c2/</url>
     <content><![CDATA[<p>lenet 在minst数据集的测试，主要增加了线性层归一化，测试集准确率为99.1%</p>
