@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"li-you-ran.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":"ture","show_result":"ture","style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":"ture","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
   </script>
 
-  <meta name="description" content="#以C++作为编程语言刷题，开始并未使用STL，感觉设计运行确实繁琐一些">
+  <meta name="description" content="##以C++作为编程语言刷题，开始并未使用STL，感觉设计运行确实繁琐一些">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode刷题历程">
 <meta property="og:url" content="https://li-you-ran.github.io/posts/d16ecfb3/index.html">
 <meta property="og:site_name" content="Li You&#39;s Blog">
-<meta property="og:description" content="#以C++作为编程语言刷题，开始并未使用STL，感觉设计运行确实繁琐一些">
+<meta property="og:description" content="##以C++作为编程语言刷题，开始并未使用STL，感觉设计运行确实繁琐一些">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-26T02:43:21.000Z">
-<meta property="article:modified_time" content="2020-10-26T02:55:03.793Z">
+<meta property="article:modified_time" content="2020-10-26T04:37:54.960Z">
 <meta property="article:author" content="li you">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="c++">
@@ -214,7 +214,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-10-26 10:43:21 / 修改时间：10:55:03" itemprop="dateCreated datePublished" datetime="2020-10-26T10:43:21+08:00">2020-10-26</time>
+              <time title="创建时间：2020-10-26 10:43:21 / 修改时间：12:37:54" itemprop="dateCreated datePublished" datetime="2020-10-26T10:43:21+08:00">2020-10-26</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -237,10 +237,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>#以C++作为编程语言刷题，开始并未使用STL，感觉设计运行确实繁琐一些</p>
+        <p>##以C++作为编程语言刷题，开始并未使用STL，感觉设计运行确实繁琐一些</p>
 <a id="more"></a>
-<h2><span id="剑指offer-03-数组重复数字">剑指offer 03 数组重复数字</span></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findRepeatNumber(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line"></span><br><span class="line">      </span><br><span class="line"> for(int i&#x3D;0;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        int index&#x3D;nums[i]%nums.size();</span><br><span class="line">        nums[index]+&#x3D;nums.size();</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(nums[i]&gt;&#x3D;2*nums.size())</span><br><span class="line">        &#123;</span><br><span class="line">            return i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">## 剑指offer 04 二位数组查找</span><br></pre></td></tr></table></figure>
-<p>class Solution {<br>public:<br>    bool findNumberIn2DArray(vector&lt;vector<int>&gt;&amp; matrix, int target) {<br>         if ( matrix.size() == 0 || matrix[0].size() == 0) {<br>            return false;<br>        }</int></p>
+<h2><span id="剑指offer-03-数组重复数字">剑指offer 03 数组重复数字</span></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findRepeatNumber(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line"></span><br><span class="line">      </span><br><span class="line"> for(int i&#x3D;0;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        int index&#x3D;nums[i]%nums.size();</span><br><span class="line">        nums[index]+&#x3D;nums.size();</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(nums[i]&gt;&#x3D;2*nums.size())</span><br><span class="line">        &#123;</span><br><span class="line">            return i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2><span id="剑指offer-04-二位数组查找">剑指offer 04 二位数组查找</span></h2><p>class Solution {<br>public:<br>    bool findNumberIn2DArray(vector&lt;vector<int>&gt;&amp; matrix, int target) {<br>         if ( matrix.size() == 0 || matrix[0].size() == 0) {<br>            return false;<br>        }</int></p>
 <pre><code>    int rows = matrix.size(), coums = matrix[0].size();
     int coum = coums - 1;
     int row = 0;
@@ -465,15 +465,6 @@ else
     rsp = n_s -sp *(i-1);
 &#125;
 
-
-
-
-
-
-
-
-
-
 int s;
 string  space = &quot;&quot; ;
 space.append(sp, &#39; &#39;);
@@ -659,7 +650,7 @@ for (s =1; s&lt; i ; s++)
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">剑指offer 03 数组重复数字</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">剑指offer 03 数组重复数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">剑指offer 04 二位数组查找</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

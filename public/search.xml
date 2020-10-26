@@ -36,10 +36,10 @@
   <entry>
     <title>leetcode刷题历程</title>
     <url>/posts/d16ecfb3/</url>
-    <content><![CDATA[<p>#以C++作为编程语言刷题，开始并未使用STL，感觉设计运行确实繁琐一些</p>
+    <content><![CDATA[<p>##以C++作为编程语言刷题，开始并未使用STL，感觉设计运行确实繁琐一些</p>
 <a id="more"></a>
-<h2><span id="剑指offer-03-数组重复数字">剑指offer 03 数组重复数字</span></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findRepeatNumber(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line"></span><br><span class="line">      </span><br><span class="line"> for(int i&#x3D;0;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        int index&#x3D;nums[i]%nums.size();</span><br><span class="line">        nums[index]+&#x3D;nums.size();</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(nums[i]&gt;&#x3D;2*nums.size())</span><br><span class="line">        &#123;</span><br><span class="line">            return i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">## 剑指offer 04 二位数组查找</span><br></pre></td></tr></table></figure>
-<p>class Solution {<br>public:<br>    bool findNumberIn2DArray(vector&lt;vector<int>&gt;&amp; matrix, int target) {<br>         if ( matrix.size() == 0 || matrix[0].size() == 0) {<br>            return false;<br>        }</int></p>
+<h2><span id="剑指offer-03-数组重复数字">剑指offer 03 数组重复数字</span></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findRepeatNumber(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line"></span><br><span class="line">      </span><br><span class="line"> for(int i&#x3D;0;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        int index&#x3D;nums[i]%nums.size();</span><br><span class="line">        nums[index]+&#x3D;nums.size();</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i&#x3D;0;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(nums[i]&gt;&#x3D;2*nums.size())</span><br><span class="line">        &#123;</span><br><span class="line">            return i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2><span id="剑指offer-04-二位数组查找">剑指offer 04 二位数组查找</span></h2><p>class Solution {<br>public:<br>    bool findNumberIn2DArray(vector&lt;vector<int>&gt;&amp; matrix, int target) {<br>         if ( matrix.size() == 0 || matrix[0].size() == 0) {<br>            return false;<br>        }</int></p>
 <pre><code>    int rows = matrix.size(), coums = matrix[0].size();
     int coum = coums - 1;
     int row = 0;
@@ -263,15 +263,6 @@ else
 
     rsp = n_s -sp *(i-1);
 &#125;
-
-
-
-
-
-
-
-
-
 
 int s;
 string  space = &quot;&quot; ;
