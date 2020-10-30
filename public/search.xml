@@ -69,6 +69,27 @@
       </tags>
   </entry>
   <entry>
+    <title>mylife</title>
+    <url>/posts/c9e3de7b/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>nvida_+cuda配置</title>
+    <url>/posts/8c814bdb/</url>
+    <content><![CDATA[<p>ubuntu18.04<br>配置环境：nvidia 、 cuda10.1</p>
+<a id="more"></a>
+
+<h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><p>添加ppa源无反应或超时，更新软件源显示无公匙， 添加秘匙， 更新软件源，有概率ppa源添加成功；如果软件源更新进度为0，将默认通道由ipv6改为ipv</p>
+<p>安装cuda包，驱动貌似并未集成，若单独安装cuda工具包没有问题， 如果一起安装会失败，下次有时间记得查一下</p>
+]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+      <tags>
+        <tag>开发环境配置</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>letnet_minst</title>
     <url>/posts/574630c2/</url>
     <content><![CDATA[<p>lenet 在minst数据集的测试，主要增加了线性层归一化，测试集准确率为99.1%</p>
@@ -82,11 +103,6 @@
         <tag>AI</tag>
         <tag>神经网络</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>mylife</title>
-    <url>/posts/c9e3de7b/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>pthread多线程矩阵运算</title>
