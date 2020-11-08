@@ -69,6 +69,12 @@
       </tags>
   </entry>
   <entry>
+    <title>mylife</title>
+    <url>/posts/c9e3de7b/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/liyouran/image/raw/master/a.png"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>letnet_minst</title>
     <url>/posts/574630c2/</url>
     <content><![CDATA[<p>lenet 在minst数据集的测试，主要增加了线性层归一化，测试集准确率为99.1%</p>
@@ -82,11 +88,6 @@
         <tag>AI</tag>
         <tag>神经网络</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>mylife</title>
-    <url>/posts/c9e3de7b/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>nvida_+cuda配置</title>
