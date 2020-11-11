@@ -69,12 +69,6 @@
       </tags>
   </entry>
   <entry>
-    <title>mylife</title>
-    <url>/posts/c9e3de7b/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/liyouran/image/raw/master/a.png"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>letnet_minst</title>
     <url>/posts/574630c2/</url>
     <content><![CDATA[<p>lenet 在minst数据集的测试，主要增加了线性层归一化，测试集准确率为99.1%</p>
@@ -88,6 +82,15 @@
         <tag>AI</tag>
         <tag>神经网络</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>mylife</title>
+    <url>/posts/c9e3de7b/</url>
+    <content><![CDATA[<p>1，三轴<br><a href="https://item.taobao.com/item.htm?id=624878061158&amp;ali_refid=a3_430585_1006:1285140098:N:1Rms8eYzlHyZAGR04W8VcCfyUhAHen7K:c56260f82092edc4e4a6398b2aefef25&amp;ali_trackid=1_c56260f82092edc4e4a6398b2aefef25&amp;spm=a230r.1.14.11#detail">https://item.taobao.com/item.htm?id=624878061158&amp;ali_refid=a3_430585_1006:1285140098:N:1Rms8eYzlHyZAGR04W8VcCfyUhAHen7K:c56260f82092edc4e4a6398b2aefef25&amp;ali_trackid=1_c56260f82092edc4e4a6398b2aefef25&amp;spm=a230r.1.14.11#detail</a></p>
+<p>2.机械臂<br><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.46.51e36e22aQSFnl&amp;id=631579627396&amp;ns=1&amp;abbucket=3#detail">https://item.taobao.com/item.htm?spm=a230r.1.14.46.51e36e22aQSFnl&amp;id=631579627396&amp;ns=1&amp;abbucket=3#detail</a></p>
+<p>3,机械臂</p>
+<p><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.16.e9ad6217JqEuSt&amp;id=570720912521&amp;ns=1&amp;abbucket=3#detail">https://item.taobao.com/item.htm?spm=a230r.1.14.16.e9ad6217JqEuSt&amp;id=570720912521&amp;ns=1&amp;abbucket=3#detail</a></p>
+]]></content>
   </entry>
   <entry>
     <title>nvida_+cuda配置</title>
