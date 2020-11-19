@@ -110,6 +110,14 @@
       </tags>
   </entry>
   <entry>
+    <title>opencv配置</title>
+    <url>/posts/365433df/</url>
+    <content><![CDATA[<p>ubuntu18.04<br>配置环境：opencv</p>
+<a id="more"></a>
+
+]]></content>
+  </entry>
+  <entry>
     <title>pthread多线程矩阵运算</title>
     <url>/posts/12c87f1c/</url>
     <content><![CDATA[<h2 id="多线程进行矩阵运算"><a href="#多线程进行矩阵运算" class="headerlink" title="多线程进行矩阵运算"></a>多线程进行矩阵运算</h2><p>主要为定义二级指针，实现动态二位数组以及随机赋值，但是存在线程数组无法动态赋值的问题</p>
