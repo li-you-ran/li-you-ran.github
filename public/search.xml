@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo部署在gitee可能出现问题</title>
-    <url>/posts/5237292d/</url>
-    <content><![CDATA[<h2 id="gitee-静态页面强制"><a href="#gitee-静态页面强制" class="headerlink" title="gitee  静态页面强制"></a>gitee  静态页面强制</h2><a id="more"></a>
-
-<p>将hexo部署到gitee后，本地可以更新，浏览器访问必须强制刷新,清除浏览器缓存后更新，否则一直调用本地缓存，并且第一次登入图标加载也会有点问题。</p>
-<p><strong>将hexo部署到github并未发生这种问题</strong></p>
-]]></content>
-      <categories>
-        <category>DIY</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>-gitee</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubutu桌面不显示</title>
     <url>/posts/c66da4c6/</url>
     <content><![CDATA[<h2 id="ubuntu-桌面不显示文件"><a href="#ubuntu-桌面不显示文件" class="headerlink" title="ubuntu 桌面不显示文件"></a>ubuntu 桌面不显示文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;使用快捷键</span><br><span class="line">win + tab</span><br></pre></td></tr></table></figure>
@@ -31,6 +15,22 @@
       </categories>
       <tags>
         <tag>linux问题汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo部署在gitee可能出现问题</title>
+    <url>/posts/5237292d/</url>
+    <content><![CDATA[<h2 id="gitee-静态页面强制"><a href="#gitee-静态页面强制" class="headerlink" title="gitee  静态页面强制"></a>gitee  静态页面强制</h2><a id="more"></a>
+
+<p>将hexo部署到gitee后，本地可以更新，浏览器访问必须强制刷新,清除浏览器缓存后更新，否则一直调用本地缓存，并且第一次登入图标加载也会有点问题。</p>
+<p><strong>将hexo部署到github并未发生这种问题</strong></p>
+]]></content>
+      <categories>
+        <category>DIY</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>-gitee</tag>
       </tags>
   </entry>
   <entry>
@@ -69,16 +69,6 @@
       </tags>
   </entry>
   <entry>
-    <title>mylife</title>
-    <url>/posts/c9e3de7b/</url>
-    <content><![CDATA[<p>1.resnet:<a href="https://wmathor.com/index.php/archives/1385/">https://wmathor.com/index.php/archives/1385/</a></p>
-<p>1，三轴<br><a href="https://item.taobao.com/item.htm?id=624878061158&amp;ali_refid=a3_430585_1006:1285140098:N:1Rms8eYzlHyZAGR04W8VcCfyUhAHen7K:c56260f82092edc4e4a6398b2aefef25&amp;ali_trackid=1_c56260f82092edc4e4a6398b2aefef25&amp;spm=a230r.1.14.11#detail">https://item.taobao.com/item.htm?id=624878061158&amp;ali_refid=a3_430585_1006:1285140098:N:1Rms8eYzlHyZAGR04W8VcCfyUhAHen7K:c56260f82092edc4e4a6398b2aefef25&amp;ali_trackid=1_c56260f82092edc4e4a6398b2aefef25&amp;spm=a230r.1.14.11#detail</a></p>
-<p>2.机械臂<br><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.46.51e36e22aQSFnl&amp;id=631579627396&amp;ns=1&amp;abbucket=3#detail">https://item.taobao.com/item.htm?spm=a230r.1.14.46.51e36e22aQSFnl&amp;id=631579627396&amp;ns=1&amp;abbucket=3#detail</a></p>
-<p>3,机械臂</p>
-<p><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.16.e9ad6217JqEuSt&amp;id=570720912521&amp;ns=1&amp;abbucket=3#detail">https://item.taobao.com/item.htm?spm=a230r.1.14.16.e9ad6217JqEuSt&amp;id=570720912521&amp;ns=1&amp;abbucket=3#detail</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>letnet_minst</title>
     <url>/posts/574630c2/</url>
     <content><![CDATA[<p>lenet 在minst数据集的测试，主要增加了线性层归一化，测试集准确率为99.1%</p>
@@ -92,6 +82,16 @@
         <tag>AI</tag>
         <tag>神经网络</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>mylife</title>
+    <url>/posts/c9e3de7b/</url>
+    <content><![CDATA[<p>1.resnet:<a href="https://wmathor.com/index.php/archives/1385/">https://wmathor.com/index.php/archives/1385/</a></p>
+<p>1，三轴<br><a href="https://item.taobao.com/item.htm?id=624878061158&amp;ali_refid=a3_430585_1006:1285140098:N:1Rms8eYzlHyZAGR04W8VcCfyUhAHen7K:c56260f82092edc4e4a6398b2aefef25&amp;ali_trackid=1_c56260f82092edc4e4a6398b2aefef25&amp;spm=a230r.1.14.11#detail">https://item.taobao.com/item.htm?id=624878061158&amp;ali_refid=a3_430585_1006:1285140098:N:1Rms8eYzlHyZAGR04W8VcCfyUhAHen7K:c56260f82092edc4e4a6398b2aefef25&amp;ali_trackid=1_c56260f82092edc4e4a6398b2aefef25&amp;spm=a230r.1.14.11#detail</a></p>
+<p>2.机械臂<br><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.46.51e36e22aQSFnl&amp;id=631579627396&amp;ns=1&amp;abbucket=3#detail">https://item.taobao.com/item.htm?spm=a230r.1.14.46.51e36e22aQSFnl&amp;id=631579627396&amp;ns=1&amp;abbucket=3#detail</a></p>
+<p>3,机械臂</p>
+<p><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.16.e9ad6217JqEuSt&amp;id=570720912521&amp;ns=1&amp;abbucket=3#detail">https://item.taobao.com/item.htm?spm=a230r.1.14.16.e9ad6217JqEuSt&amp;id=570720912521&amp;ns=1&amp;abbucket=3#detail</a></p>
+]]></content>
   </entry>
   <entry>
     <title>nvida_+cuda配置</title>
